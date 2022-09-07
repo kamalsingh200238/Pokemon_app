@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import allPokemonData from "../../lib/allPokemonData.js";
+import PokemonGrid from "../../components/PokemonGrid";
 
 export default function Csr() {
   //state to store pokemon data
@@ -19,6 +20,7 @@ export default function Csr() {
     return (
       <>
         <div>This page is generated on the client side</div>
+        <PokemonGrid allPokemonData={pokemon.results} />
       </>
     );
   } else {
