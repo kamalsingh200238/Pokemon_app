@@ -12,10 +12,11 @@ export default function pokemonPage() {
   } = useRouter();
 
   useEffect(() => {
+    async function getData() {
+      setSinglePokemon(await singlePokemonData(id));
+    }
+    //check id is not undefinded
     if (id) {
-      async function getData() {
-        setSinglePokemon(await singlePokemonData(id));
-      }
       getData();
     }
   }, [id]);
