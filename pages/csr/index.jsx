@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import allPokemonData from "../../lib/allPokemonData.js";
 import PokemonGrid from "../../components/PokemonGrid";
 
-export default function Csr() {
+export default function csr() {
   //state to store pokemon data
   const [pokemon, setPokemon] = useState([]);
 
