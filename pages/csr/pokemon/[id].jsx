@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import singlePokemonData from "../../../lib/singlePokemonData";
+import PokemonInfo from "../../../components/PokemonInfo";
 
 export default function pokemonPage() {
   // Pokemon Data state
@@ -21,12 +22,9 @@ export default function pokemonPage() {
     }
   }, [id]);
 
-  console.log(id);
-  console.log(singlePokemon);
-
   return (
     <>
-      <div>{singlePokemon.name}</div>
+      <PokemonInfo singlePokemon={singlePokemon} />
     </>
   );
 }

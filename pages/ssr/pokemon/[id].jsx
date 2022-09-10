@@ -1,4 +1,5 @@
 import singlePokemonData from "../../../lib/singlePokemonData";
+import PokemonInfo from "../../../components/PokemonInfo";
 
 export async function getServerSideProps({ params }) {
   const resp = await singlePokemonData(params.id);
@@ -9,10 +10,9 @@ export async function getServerSideProps({ params }) {
   };
 }
 export default function pokemonPage({ singlePokemon }) {
-  // console.log(singlePokemon);
   return (
     <>
-      <div></div>
+      <PokemonInfo singlePokemon={singlePokemon} />
     </>
   );
 }
