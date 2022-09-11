@@ -13,7 +13,7 @@ export async function getStaticProps() {
 export default function ssg({ pokemon }) {
   return (
     <>
-      <div className="">This is staticaly generated</div>
+      <div className="">This page is staticaly generated</div>
       <PokemonGrid allPokemonData={pokemon.results} />
     </>
   );

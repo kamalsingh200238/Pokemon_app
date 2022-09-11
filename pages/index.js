@@ -18,7 +18,7 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="">
+      <div className="flex flex-col gap-6">
         {linkData.map((item, index) => {
           return (
             <Link key={index} href={item.link}>
