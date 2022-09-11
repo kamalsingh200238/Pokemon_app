@@ -22,9 +22,14 @@ export default function pokemonPage() {
     }
   }, [id]);
 
-  return (
-    <>
-      <PokemonInfo singlePokemon={singlePokemon} />
-    </>
-  );
+  // Checking singlePokemon is not undefined
+  if (singlePokemon.name) {
+    return (
+      <>
+        <PokemonInfo singlePokemon={singlePokemon} />
+      </>
+    );
+  } else {
+    return <div>Loading</div>;
+  }
 }

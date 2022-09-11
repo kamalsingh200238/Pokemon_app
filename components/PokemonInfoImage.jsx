@@ -6,8 +6,8 @@ export default function PokemonInfoImage(props) {
       <Image
         priority
         src={
-          props.singlePokemon?.sprites?.other.dream_world.front_default ||
-          props.singelPokemon?.sprites?.other["official-artwork"].front_default
+          props.singlePokemon.sprites.other.dream_world.front_default ||
+          props.singelPokemon.sprites.other["official-artwork"].front_default
         }
         alt={`Image of ${props.singlePokemon.name}`}
         layout="fill"
